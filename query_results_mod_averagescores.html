@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/><style>
+table {border: medium solid #6495ed;border-collapse: collapse;width: 100%;} th{font-family: monospace;border: thin solid #6495ed;padding: 5px;background-color: #D0E3FA;}th{text-align: left;}td{font-family: sans-serif;border: thin solid #6495ed;padding: 5px;text-align: center;}.odd{background:#e8edff;}img{padding:5px; border:solid; border-color: #dddddd #aaaaaa #aaaaaa #dddddd; border-width: 1px 2px 2px 1px; background-color:white;}</style>
+</head>
+<body>
+<table><tr><th colspan="4"><pre><code>-- Total number of reports and the average scores per modality<br>select<br>	modality,<br>	COUNT(*) as report_count,<br>	AVG(bleu4) as avg_bleu4,<br>	AVG(bertscore) as avg_bertscore<br>from<br>	radiology_reports<br>group by<br>	modality</code></pre></th></tr><tr><th>modality</th><th>report_count</th><th>avg_bleu4</th><th>avg_bertscore</th></tr><tr class="odd"><td>CT</td><td>1</td><td>0.78</td><td>0.87</td></tr>
+<tr><td>MRI</td><td>1</td><td>0.92</td><td>0.94</td></tr>
+<tr class="odd"><td>Ultrasound</td><td>1</td><td>0.88</td><td>0.89</td></tr>
+<tr><td>X-ray</td><td>2</td><td>0.875</td><td>0.915</td></tr>
+</table></body></html>

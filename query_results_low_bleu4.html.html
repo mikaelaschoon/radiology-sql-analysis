@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/><style>
+table {border: medium solid #6495ed;border-collapse: collapse;width: 100%;} th{font-family: monospace;border: thin solid #6495ed;padding: 5px;background-color: #D0E3FA;}th{text-align: left;}td{font-family: sans-serif;border: thin solid #6495ed;padding: 5px;text-align: center;}.odd{background:#e8edff;}img{padding:5px; border:solid; border-color: #dddddd #aaaaaa #aaaaaa #dddddd; border-width: 1px 2px 2px 1px; background-color:white;}</style>
+</head>
+<body>
+<table><tr><th colspan="8"><pre><code>-- Reports with unusually low bleu4 scores (&lt; 0.8)<br>select<br>	*<br>from<br>	radiology_reports<br>where<br>	bleu4 &lt; 0.8<br>order by<br>	bleu4 asc</code></pre></th></tr><tr><th>report_id</th><th>patient_id</th><th>modality</th><th>findings</th><th>bleu4</th><th>bertscore</th><th>radgraph_f1</th><th>radcliq</th></tr><tr class="odd"><td>1,003</td><td>503</td><td>CT</td><td>Small lung nodule detected.</td><td>0.78</td><td>0.87</td><td>0.81</td><td>0.68</td></tr>
+</table></body></html>
